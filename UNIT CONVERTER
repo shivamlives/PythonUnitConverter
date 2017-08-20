@@ -1,0 +1,151 @@
+#conversion program
+print("\n\n\n\t\t\t *************UNIT CONVERTER(UNIVERSAL)************* ") 
+print("\n\t\t\tNAME:SHIVAM KUMAR ECE-2 \n\t\t\t CHANDIGARH UNIVERSITY")
+print("\nPlease USE FULL UNIT NAME ")
+metric = input("\nenter the type of metric :*time*/ *length* / *weight* / *volume* : ")
+value = int(input("\nenter the numerical value : "))
+unit = input("\nenter the unit in which you have entered the numerical value : ")
+convert = input("\nenter the unit in which you want to convert the above given value : ")
+ans = 0
+if metric == 'time' :
+    if convert == 'seconds' :
+        if unit == 'minutes' :
+            ans = value * 60
+        elif unit == 'hours' :
+            ans = value * 60 *60
+        elif unit == 'days' :
+            ans = value * 24 * 60 * 60
+        else :
+            print("wrong option")
+    elif convert == 'minutes' :
+        if unit == 'seconds' :
+            ans = value / 60
+        elif unit == 'hours':
+            ans = value * 60
+        elif unit == 'days' :
+            ans = value * 24 * 60
+        else :
+            print("wrong option")
+    elif convert == 'hours' :
+        if unit == 'seconds' :
+            ans = value / 60 /60
+        elif unit == 'minutes':
+            ans = value / 60
+        elif unit == 'days' :
+            ans = value * 24
+        else :
+            print("wrong option")
+    elif convert == 'days' :
+        if unit == 'seconds' :
+            ans = value / 60 /60 / 60
+        elif unit == 'minutes' :
+            ans = value / 60 / 24
+        elif unit == 'hours' :
+            ans = value / 24
+        else :
+            print("wrong option")
+    else :
+        print("WRONG OPTION")
+elif metric == 'length' :
+    if convert == 'yards' :
+        if unit == 'centimeter' :
+            ans = value * 0.0109361
+        elif unit == 'meter' :
+            ans = value * 1.09361
+        elif unit == 'inches' :
+            ans = value * 0.0277778
+        else :
+            print("wrong option")
+    elif convert == 'centimeter' :
+        if unit == 'yards' :
+            ans = value * 91.44
+        elif unit == 'meter' :
+            ans = value * 100
+        elif unit == 'inches' :
+            ans = value * 2.54
+        else :
+            print("wrong option")
+    elif convert == 'meter' :
+        if unit == 'yards' :
+            ans = value * 0.9144
+        elif unit == 'centimeter' :
+            ans = value * 0.01 
+        elif unit == 'inches' :
+            ans = value * 0.0254
+        else :
+            print("wrong option")
+    elif convert == 'inches' :
+        if unit == 'yards' :
+            ans = value * 36
+        elif unit == 'centimeter' :
+            ans = value * 0.393701 
+        elif unit == 'meter' :
+            ans = value * 39.3701
+        else :
+            print("wrong option")
+    else :
+        print("WRONG OPTION")
+elif metric == 'weight' :
+    if convert == 'gram' :
+        if unit == 'kilogram' :
+            ans = value * 1000
+        elif unit == 'pound' :
+            ans = value * 453.592
+        else :
+            print("wrong option")
+    elif convert == 'kilogram' :
+        if unit == 'gram' :
+            ans = value * 0.001
+        elif unit == 'pound' :
+            ans = value * 0.453592
+        else :
+            print("wrong option")
+    elif convert == 'pound' :
+        if unit == 'gram' :
+            ans = value * 0.00220462
+        elif unit == 'kilogram' :
+            ans = value * 2.20462
+        else :
+            print("wrong option")
+    else :
+        print("WRONG OPTION")
+elif metric == 'volume' :
+    if convert == 'litres' :
+        if unit == 'gallon' :
+            ans = value * 3.78541
+        elif unit == 'barrel' :
+            ans = value * 190.932
+        else :
+            print("wrong option")
+    elif convert == 'gallon' :
+        if unit == 'litres' :
+            ans = value * 0.264172
+        elif unit == 'barrel' :
+            ans = value * 42
+        else :
+            print("wrong option")
+    elif convert == 'barrel' :
+        if unit == 'litres' :
+            ans = value / 190.932
+        elif unit == 'gallon' :
+            ans = value / 42
+        else :
+            print("wrong option")
+    else :
+        print("WRONG OPTION")
+else :
+    print("YOU HAVE ENTERED WRONG METRIC")
+if ans == 0 :
+    print("\nIT CAN NOT BE CONVERTED")
+else :
+    print("\n",value,unit,"=",ans,convert)
+
+input("Press enter to exit ")  
+    
+
+
+
+
+    
+        
+
